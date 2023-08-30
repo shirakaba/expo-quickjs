@@ -1,0 +1,10 @@
+{
+  "platforms": ["android", "ios"],
+  "android": {
+    "gradlePath": "expo/build.gradle"
+  },
+  "ios": {
+    "modules": [],
+    "appDelegateSubscribers": []
+  }
+}

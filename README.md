@@ -12,6 +12,20 @@ yarn ios
 
 ## Run with existing project
 
+### Installation for Expo projects (>= SDK 45)
+
+For managed projects, you can install through the single command:
+
+```sh
+$ expo install react-native-v8 expo-build-properties
+```
+
+- Please make sure you don't have [`"jsEngine": "hermes"`](https://docs.expo.dev/guides/using-hermes/#android-setup).
+
+For bare projects, you can run `expo prebuild -p android --clean` after the installation to prebuild again.
+
+### Installation for React Native >= 0.71.8
+
 **Only tested for React Native >= 0.71.8. Please create an issue if it does not work for other version. Will fix it ASAP.**
 
 1. Install dependency
@@ -120,7 +134,7 @@ index 029aa44..2f579c3 100644
 --- a/ios/AwesomeProject/AppDelegate.mm
 +++ b/ios/AwesomeProject/AppDelegate.mm
 @@ -2,6 +2,27 @@
- 
+
  #import <React/RCTBundleURLProvider.h>
  
 +#import <React/RCTCxxBridgeDelegate.h>
